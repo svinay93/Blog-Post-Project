@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+<h1>Home</h1>
+<div class="">
+<% postArray.forEach(function(post){ %>
+  <h3> <%= post.title %> </h3>
+<%  let disp = post.content.slice(0,100);%>
+  <p> <%= disp %><a href="/posts/<%= post.title %>">Read more</a> </p> <br>
+<%    });   %>
+</div>
+
+<%- include('partials/footer'); -%>
